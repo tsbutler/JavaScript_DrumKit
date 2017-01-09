@@ -72,11 +72,13 @@
     if (e.propertyName !== 'transform') return; //Skip it if it's not transform
     this.classList.remove('playing');
   }
-  
+
   const keys = document.querySelectorAll('.key');
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
   window.addEventListener('keydown', playSound);
+
+  //Things to play with: transitionend, playing audio, receiving keyboard input, etc.
 
 </script>
 
